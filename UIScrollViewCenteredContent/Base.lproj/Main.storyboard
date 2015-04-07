@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77e-gu-n1b">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flt-cH-PLy">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="PZp-Hc-z6d"/>
+                                            <constraint firstAttribute="height" constant="100" id="UvK-t3-0hI"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="PZp-Hc-z6d"/>
+                                                <exclude reference="UvK-t3-0hI"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="PZp-Hc-z6d"/>
+                                                <include reference="UvK-t3-0hI"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.49281284265350866" green="1" blue="0.68745716831140347" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="Flt-cH-PLy" secondAttribute="centerY" id="KBF-FD-Qiv"/>
+                                    <constraint firstAttribute="centerX" secondItem="Flt-cH-PLy" secondAttribute="centerX" id="YFm-UZ-bjz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Flt-cH-PLy"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="KBF-FD-Qiv"/>
+                                        <exclude reference="YFm-UZ-bjz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                    <mask key="subviews">
+                                        <include reference="Flt-cH-PLy"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="KBF-FD-Qiv"/>
+                                        <include reference="YFm-UZ-bjz"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="77e-gu-n1b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8fI-vz-dmQ"/>
+                            <constraint firstItem="77e-gu-n1b" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="Tid-28-lbB"/>
+                            <constraint firstItem="77e-gu-n1b" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottom" id="WMz-Rz-drg"/>
+                            <constraint firstItem="77e-gu-n1b" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="fNN-41-xVt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="77e-gu-n1b"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8fI-vz-dmQ"/>
+                                <exclude reference="Tid-28-lbB"/>
+                                <exclude reference="WMz-Rz-drg"/>
+                                <exclude reference="fNN-41-xVt"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="77e-gu-n1b"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8fI-vz-dmQ"/>
+                                <include reference="Tid-28-lbB"/>
+                                <include reference="WMz-Rz-drg"/>
+                                <include reference="fNN-41-xVt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="centeredView" destination="Flt-cH-PLy" id="OSx-C0-c17"/>
+                        <outlet property="scrollView" destination="77e-gu-n1b" id="gEJ-JP-rGx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
